@@ -25,6 +25,8 @@ function createEntry($entry, $counter){
     echo "<p>[added on " . $entry->date->day . "-" . $entry->date->month . "-" . $entry->date->year . "]</p>";
     echo "</div>";
     echo "</div>";
+    
+    echo "<div class='body-outline'>";
     echo "<div class='item-body'>";
     
     // Create list of tags
@@ -68,6 +70,7 @@ function createEntry($entry, $counter){
         }
         echo "</div>";
     }
+    echo "</div>";
     echo "</div>";
     echo "</div>";
     echo "</segment>";

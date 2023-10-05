@@ -111,9 +111,6 @@ main {
   font-size: 18px;
   margin: 1em 0;
 }
-.item div {
-  background-color: white;
-}
 
 .item.hidden {
   visibility: hidden;
@@ -145,15 +142,16 @@ main {
 }
 
 .item-header-container {
-  padding: 0.075em 0.075em 0;
-  background-color: #059547 !important;
+  padding: 0.1em 0.1em 0;
+  background-color: #059547;
   max-width: 60%;
   text-align: center;
+  transform: translateY(0.12em);
 }
 
 .item-header {
   padding: 0.75em 1em;
-  transform: translate(0.03em, 0.03em);
+  background-color: white;
 }
 .item-header h1 {
   font-size: 1.5em;
@@ -168,11 +166,16 @@ main {
   opacity: 0.6;
 }
 
+.body-outline {
+  background-color: #059547;
+  padding: 0.1em;
+}
+
 .item-body {
-  border: #059547 solid 0.1em;
   padding: 0.75em 1em;
   text-align: center;
   position: relative;
+  background-color: white;
 }
 .item-body img {
   width: 85%;
