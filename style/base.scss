@@ -1,0 +1,15 @@
+$themeGreen: #059547;
+
+body, html, p {
+    margin: 0;
+    padding: 0;
+}
+button, h1, h2, h3, h4, h5, a {
+    all: unset;
+}
+@font-face {
+    font-family: 'Orbitron';
+    src:url('assets/Orbitron-Light.ttf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

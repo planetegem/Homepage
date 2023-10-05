@@ -1,0 +1,57 @@
+
+#fps-counter {
+    position: fixed;
+    font-family: 'Orbitron' sans-serif;
+    color: #059547;
+    left: 1em;
+    top: 0.5em;
+    opacity: 0.8;
+    display: none;
+    z-index: -1;
+}
+#background-field {
+    position: fixed;
+    left: -100vw;
+    bottom: 0;
+    width: 300vw;
+    height: 60vh;
+    animation: background-fade 0.2s ease-in;
+    z-index: -1;
+}
+#background-planet {
+    position: fixed;
+    right: 0; left: 0; margin: auto;
+    top: 25vh; bottom: 50vh;
+    width: 120vh;
+    max-width: 95vw;
+    z-index: -2;
+    opacity: 0;
+    animation: planet-appear 2s cubic-bezier(.03,.65,.35,.97) 0.2s;
+    animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes background-fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes planet-appear {
+    0% {opacity: 0.6; transform: translateY(50vh); scale: 2.5;}
+    100% {opacity: 0.6; transform: translateY(0); scale: 1;}
+}
+
+@media only screen and (min-width: 1000px) {
+    #background-field {
+        left: -37.5vw;
+        width: 175vw;
+        height: 60vh;
+    }
+    #background-planet {
+        top: 10vh;
+    }
+    #fps-counter {
+        display: block;
+        font-size: 1.30vw;
+    }
+}

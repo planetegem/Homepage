@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventory>
+    <entry>
+        <title>The Maze Base</title>
+        <date>
+            <year>2023</year>
+            <month>08</month>
+            <day>24</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>demo</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/mazeBase.html</description>
+        <coding>inventory/entries/mazeBase_coding.html</coding>
+        <thumbnail>thumbnails/maze.gif</thumbnail>
+        <links>
+            <link target="/demo/the_maze_base">generate mazes</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Prove you're a robot</title>
+        <date>
+            <year>2023</year>
+            <month>08</month>
+            <day>08</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>game</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/pyar.html</description>
+        <thumbnail>thumbnails/pyarLogo.svg</thumbnail>
+        <links>
+            <link target="/eb/pyar">play game</link>
+            <link target="/eb/pyar/output.php">visit database</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Prompt Generator</title>
+        <date>
+            <year>2023</year>
+            <month>04</month>
+            <day>26</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>demo</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/prompt_generator.html</description>
+        <thumbnail>thumbnails/prompter.gif</thumbnail>
+        <links>
+            <link target="/demo/prompt_builder">generate prompts</link>
+        </links>
+    </entry>
+</inventory>
