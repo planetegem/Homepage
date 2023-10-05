@@ -59,4 +59,233 @@
             <link target="/demo/prompt_builder">generate prompts</link>
         </links>
     </entry>
+    <entry>
+        <title>Planetegem Painter</title>
+        <date>
+            <year>2023</year>
+            <month>02</month>
+            <day>13</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>coding</tag>
+            <tag>demo</tag>
+        </tags>
+        <description>inventory/entries/planetegem_painter.html</description>
+        <thumbnail>thumbnails/paint_simulator.png</thumbnail>
+        <links>
+            <link target="/demo/planetegem_painter">start painting</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Conspiracy Maze</title>
+        <date>
+            <year>2023</year>
+            <month>01</month>
+            <day>06</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>coding</tag>
+            <tag>game</tag>
+        </tags>
+        <description>inventory/entries/conspiracy_maze.html</description>
+        <thumbnail>thumbnails/conspiracymaze.svg</thumbnail>
+        <links>
+            <link target="/eb/conspiracy_maze">play game</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Ararat-II</title>
+        <date>
+            <year>2023</year>
+            <month>05</month>
+            <day>31</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/ararat2.html</description>
+        <thumbnail>thumbnails/ararat-2.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=02&amp;h=02">read chapter</link>
+            <link target ="/vk/pdf/d02h02.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Ararat-I</title>
+        <date>
+            <year>2022</year>
+            <month>11</month>
+            <day>23</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/ararat1.html</description>
+        <thumbnail>thumbnails/ararat-1.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=02&amp;h=01">read chapter</link>
+            <link target ="/vk/pdf/d02h01.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Political Memory (legacy)</title>
+        <date>
+            <year>2022</year>
+            <month>10</month>
+            <day>02</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>coding</tag>
+            <tag>game</tag>
+        </tags>
+        <description>inventory/entries/polmem_legacy.html</description>
+        <thumbnail>thumbnails/pm_icon.png</thumbnail>
+        <links>
+            <link target="/eb/political_memory">play game</link>
+        </links>
+    </entry>
+    <entry>
+        <title>The Durability Disc</title>
+        <date>
+            <year>2022</year>
+            <month>09</month>
+            <day>15</day>
+        </date>
+        <language>english</language>
+        <type>update</type>
+        <tags>
+            <tag>encyclopaedia belgica</tag>
+            <tag>demo</tag>
+        </tags>
+        <description>inventory/entries/durability_disc.html</description>
+        <thumbnail>thumbnails/durability_disc.gif</thumbnail>
+        <links>
+            <link target="/eb/durability_disc">toss the coin</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Kinetosis: Lipide-2568</title>
+        <date>
+            <year>2022</year>
+            <month>08</month>
+            <day>18</day>
+        </date>
+        <language>dutch</language>
+        <type>project</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/kinetosis_pdf.html</description>
+        <thumbnail>thumbnails/vk_logo.png</thumbnail>
+        <links>
+            <link target="/vk/pdf/d01_kinetosis.pdf">read full pdf</link>
+            <link target="/vk">table of contents</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Lipide-III</title>
+        <date>
+            <year>2022</year>
+            <month>08</month>
+            <day>16</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/lipide3.html</description>
+        <thumbnail>thumbnails/lipide-3.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=01&amp;h=03">read chapter</link>
+            <link target ="/vk/pdf/d01h03.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Frikandel Special</title>
+        <date>
+            <year>2022</year>
+            <month>04</month>
+            <day>21</day>
+        </date>
+        <type>project</type>
+        <language>english</language>
+        <tags>
+            <tag>encyclopaedia belgica</tag>
+            <tag>flowchart</tag>
+            <tag>poster</tag>
+        </tags>
+        <description>inventory/entries/frikandel_special.html</description>
+        <thumbnail>thumbnails/frikandel_special.png</thumbnail>
+        <links>
+            <link target="/eb/frikandel_special/poster.pdf">download poster</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Katergeil</title>
+        <date>
+            <year>2022</year>
+            <month>01</month>
+            <day>02</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>encyclopaedia belgica</tag>
+            <tag>flowchart</tag>
+        </tags>
+        <description>inventory/entries/katergeil.html</description>
+        <thumbnail>thumbnails/eb_logo.svg</thumbnail>
+        <links>
+            <link target="/eb/katergeil">visit entry</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Lipide-II</title>
+        <date>
+            <year>2021</year>
+            <month>12</month>
+            <day>11</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/lipide2.html</description>
+        <thumbnail>thumbnails/lipide-2.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=01&amp;h=02">read chapter</link>
+            <link target ="/vk/pdf/d01h02.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Lipide-I</title>
+        <date>
+            <year>2021</year>
+            <month>08</month>
+            <day>05</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/lipide1.html</description>
+        <thumbnail>thumbnails/vk_logo.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=01&amp;h=01">read chapter</link>
+            <link target ="/vk/pdf/d01h01.pdf">download pdf</link>
+        </links>
+    </entry> 
 </inventory>
