@@ -286,6 +286,12 @@ main {
   .item.left .item-body .item-description {
     grid-column: 1/2;
   }
+  .item.left .item-description p {
+    text-align: left;
+  }
+  .item.right .item-description p {
+    text-align: right;
+  }
   .item-body {
     display: grid;
     align-items: center;
@@ -293,7 +299,6 @@ main {
     padding-top: 1.5em;
   }
   .item-body p {
-    text-align: left;
     margin: 0.8em;
   }
   .item-body img {

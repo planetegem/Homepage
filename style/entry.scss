@@ -208,13 +208,26 @@ main {
             }
         }
     }
+    .item.left {
+        .item-description {
+            p {
+                text-align: left;
+            }
+        }
+    }
+    .item.right {
+        .item-description {
+            p {
+                text-align: right;
+            }
+        }
+    }
     .item-body {
         display: grid;
         align-items: center;
         grid-template-columns: 50% 50%;
         padding-top: 1.5em;
         p {
-            text-align: left;
             margin: 0.8em;
         }
         img {
