@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    background-color: white;
+    margin-top: 3em;
+    padding: 0.5em 0;
+    border-top: solid 0.1em #059547;
+    font-size: 12px;
+    p {
+        text-align: center;
+        opacity: 0.7;
+    }
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+@media only screen and (min-width: 900px) {
+    footer {
+        font-size: min(1.6vw, 1.6vh);
+    }
+}

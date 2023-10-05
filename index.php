@@ -91,6 +91,6 @@ function showSelection($selection){
 <main>
     <?php showSelection($xml); ?>
 </main>
-
+<?php include "components/footer.php"; ?>
 <script src="components/base.js"></script>
 </body>
