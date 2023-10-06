@@ -3,7 +3,7 @@ body, html, p {
   padding: 0;
 }
 
-button, h1, h2, h3, h4, h5, a {
+button, h1, h2, h3, h4, h5, a, input {
   all: unset;
 }
 
@@ -146,7 +146,7 @@ main {
   background-color: #059547;
   max-width: 60%;
   text-align: center;
-  transform: translateY(0.12em);
+  transform: translateY(0.2em);
 }
 
 .item-header {
@@ -407,7 +407,7 @@ footer a:hover {
 
 #menu-container {
   position: relative;
-  transform: translateY(-0.18em);
+  transform: translateY(-0.2em);
   margin-top: -0.1em;
   width: 100%;
   z-index: 9;
@@ -461,11 +461,48 @@ footer a:hover {
   grid-column: 1/span 2;
   opacity: 0.6;
   font-size: 0.8em;
-  margin: 1.5em auto 0;
+  margin: 0 auto;
 }
 .menu-body span:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.submit-button {
+  grid-column: 1/span 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+.submit-button input {
+  font-size: 1.4em;
+  font-variant: small-caps;
+  color: rgb(96, 96, 96);
+  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+}
+.submit-button svg {
+  height: 0.6em;
+  margin: 0 0.5em;
+  opacity: 0.9;
+}
+.submit-button svg:last-child {
+  transform: rotate(180deg);
+}
+.submit-button polygon {
+  stroke: #059547;
+  fill: rgb(96, 96, 96);
+}
+
+.submit-button:hover {
+  cursor: pointer;
+}
+.submit-button:hover svg {
+  opacity: 1;
+}
+.submit-button:hover input {
+  text-decoration: underline;
 }
 
 .checkbox {

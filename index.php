@@ -1,3 +1,78 @@
+<?php session_start(); ?>
+
+<?php
+
+// Convert post data into get data
+if ($_SERVER["REQUEST_METHOD"] === "POST"){
+    $_SESSION["posting"] = true;
+
+    $postedOrder = "order=" . $_POST["order"];
+
+    // Split variables
+    $postedLanguages = $postedTypes = $postedTags = array();
+    $geturl = "";
+
+    foreach($_POST as $key => $value){
+        $key = preg_replace("/[0-9]+/", "", $key); // Remove counter digit from input name
+        $value = str_replace(" ", "~", $value); // Clean spaces
+        if ($key === "language"){
+            $postedLanguages[] = $value;
+        } else if ($key === "type"){
+            $postedTypes[] = $value;
+        } else if ($key === "tag"){
+            $postedTags[] = $value;
+        } else if ($key === "order"){
+            $geturl = "{$key}={$value}";
+        }
+    }
+
+    // Construct url with extracted variables
+    if (count($postedLanguages) > 0){
+        $geturl = "&{$geturl}";
+        foreach($postedLanguages as $lang){
+            $geturl = "+{$lang}{$geturl}";
+        }
+        $geturl = ltrim($geturl, "+");
+        $geturl = "language={$geturl}";
+    }
+    if (count($postedTypes) > 0){
+        $geturl = "&{$geturl}";
+        foreach($postedTypes as $type){
+            $geturl = "+{$type}{$geturl}";
+        }
+        $geturl = ltrim($geturl, "+");
+        $geturl = "type={$geturl}";
+    }
+    if (count($postedTags) > 0){
+        $geturl = "&{$geturl}";
+        foreach($postedTags as $tag){
+            $geturl = "+{$tag}{$geturl}";
+        }
+        $geturl = ltrim($geturl, "+");
+        $geturl = "tag={$geturl}";
+    }
+    // Resend data as GET
+    header("location:?" . $geturl);
+}
+
+// Make GET variables usable
+if (isset($_GET["language"])){
+    $getLanguages = explode(" ", $_GET["language"]);
+    $getLanguages = str_replace("~", " ", $getLanguages);
+    $_SESSION["languages"] = $getLanguages;
+}
+if (isset($_GET["type"])){
+    $getTypes = explode(" ", $_GET["type"]);
+    $getTypes = str_replace("~", " ", $getTypes);
+    $_SESSION["types"] = $getTypes;
+}
+if (isset($_GET["tag"])){
+    $getTags = explode(" ", $_GET["tag"]);
+    $getTags = str_replace("~", " ", $getTags);
+    $_SESSION["tags"] = $getTags;
+}
+?>
+
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl">
 <head>
@@ -17,10 +92,51 @@
 $xml = simplexml_load_file("inventory/inventory.xml") or die("Error: Cannot create object");
 
 // Copy XML into work array
+function checkFilter($item){
+        if (isset($_SESSION["languages"])){
+            $languageIncluded = false;
+            foreach($_SESSION["languages"] as $langFilter){
+                if ($langFilter == $item->language){
+                    $languageIncluded = true;
+                }
+            }
+            if (!$languageIncluded){
+                return false;
+            }
+        }
+        if (isset($_SESSION["types"])){
+            $typeIncluded = false;
+            foreach($_SESSION["types"] as $typeFilter){
+                if ($typeFilter == $item->type){
+                    $typeIncluded = true;
+                }
+            }
+            if ($typeIncluded === false){
+                return false;
+            }
+        }
+        if (isset($_SESSION["tags"])){
+            $tagsArray = array();
+            foreach($item->tags->children() as $currentTag){
+                $tagsArray[] = $currentTag;
+            }
+            $test = array_intersect($_SESSION["tags"], $tagsArray);
+            if (count($test) > 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+}
+
+
 $loadedItems = [];
 foreach($xml->children() as $entry){
     $entry->techdate = $entry->date->year . "-" . $entry->date->month . "-" . $entry->date->day;
-    $loadedItems[] = $entry;
+    if(checkFilter($entry)){
+        $loadedItems[] = $entry;
+    }
 }
 
 // SORT ARRAY DEPENDING ON SETTINGS
@@ -32,85 +148,23 @@ function compDate($a, $b){
     }
 }
 usort($loadedItems, "compDate");
-
-
-function createEntry($entry, $counter){
-    $class = ($counter % 2) > 0 ? "hidden item left": "hidden item right";
-    echo "<segment class='{$class}'>";
-    echo "<div class='item-header-container'>";
-    echo "<div class='item-header'>";
-    echo "<h1>" . $entry->title . "</h1>";
-    echo "<p>[added on " . $entry->date->day . "-" . $entry->date->month . "-" . $entry->date->year . "]</p>";
-    echo "</div>";
-    echo "</div>";
-    
-    echo "<div class='body-outline'>";
-    echo "<div class='item-body'>";
-    
-    // Create list of tags
-    $tags = "tags: " . $entry->language . ", " . $entry->type;
-    foreach($entry->tags->children() as $tag){
-        $tags = $tags . ", " . $tag;
-    }
-    echo "<h4 class='item-tags'>{$tags}</h4>";
-    
-    echo "<img src='{$entry->thumbnail}' alt=''></img>";
-    echo "<div class='item-description'>";
-    include $entry->description;
-
-    if ($entry->coding){
-        echo "<span onClick='toggleCoding(this)'>[read more]</span>";
-        echo "</div>";
-        echo "<div class='coding-field'>";
-        echo "<div>";
-        include $entry->coding;
-        echo "</div>";
-        echo "</div>";
-    } else {
-        echo "</div>";
-    }
-
-    echo "<div class='item-links'>";
-    foreach($entry->links->children() as $link){
-        echo "<div class='link-container'>";
-        echo <<<SVG
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 34">
-                <polygon points="0 0 56.7 17.3 0 34 0 0"/>
-            </svg>
-            SVG;
-        echo "<a href='{$link["target"]}'>{$link}</a>";
-        if (count($entry->links->children()) === 1){
-            echo <<<SVG
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 34">
-                    <polygon points="0 0 56.7 17.3 0 34 0 0"/>
-                </svg>
-                SVG;
-        }
-        echo "</div>";
-    }
-    echo "</div>";
-    echo "</div>";
-    echo "</div>";
-    echo "</segment>";
-}
-
-function showSelection($selection){
-    $counter = 0;
-    foreach($selection as $entry){
-        $counter++;
-        createEntry($entry, $counter);
-    }
-}
-
 ?>
 
 <body>
-<?php include "components/filters.php"; ?>
-<?php include "components/background.php"; ?>
-<main>
-    <?php showSelection($loadedItems); ?>
-</main>
-<?php include "components/footer.php"; ?>
+    <?php include "components/filters.php"; ?>
+    <?php include "components/background.php"; ?>
+    <main>
+        <?php include "components/entry.php"; ?>
+    </main>
+    <?php include "components/footer.php"; ?>
 <script src="components/base.js"></script>
 <script src="components/menu.js"></script>
 </body>
+
+<?php 
+// Clean session variables
+unset($_SESSION["languages"]);
+unset($_SESSION["types"]);
+unset($_SESSION["tags"]);
+unset($_SESSION["posting"]);
+?>
