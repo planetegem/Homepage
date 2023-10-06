@@ -87,10 +87,12 @@ function showSelection($selection){
 ?>
 
 <body>
-    <?php include "components/background.php"; ?>
+<?php include "components/filters.php"; ?>
+<?php include "components/background.php"; ?>
 <main>
     <?php showSelection($xml); ?>
 </main>
 <?php include "components/footer.php"; ?>
 <script src="components/base.js"></script>
+<script src="components/menu.js"></script>
 </body>
