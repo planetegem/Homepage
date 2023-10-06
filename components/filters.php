@@ -14,10 +14,9 @@ $uniqueTypes = array_unique($uniqueTypes);
 ?>
 
 <nav id="filter-menu">
-    <div class="menu-buttons">
-        <div id="menu-button-outline" onclick="toggleMenu()">
-            <button class="filter-button">apply filters</button>
-        </div>
+    <a href="https://github.com/planetegem" target="_blank">[github]</a>
+    <div id="menu-button-outline" onclick="toggleMenu()">
+        <button class="filter-button">apply filters</button>
     </div>
     <div id="menu-container">
         <div id="menu-outline">
