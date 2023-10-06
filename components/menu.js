@@ -2,13 +2,13 @@
 let animationStart, currentFrame;
 
 function toggleMenu(){
-    if (document.getElementById("filter-menu").classList.contains("active") && !document.getElementById("filter-menu").classList.contains("closing") ){
+    if (document.getElementById("filter-menu").classList.contains("active") && !document.getElementById("filter-menu").classList.contains("closing")){
         cancelAnimationFrame(currentFrame);
         animationStart = Date.now();
         
         document.getElementById("filter-menu").classList.add("closing");
         currentFrame = requestAnimationFrame(animateClose);
-    } else {
+    } else if (!document.getElementById("filter-menu").classList.contains("closing")){
         cancelAnimationFrame(currentFrame);
         animationStart = Date.now();
         
