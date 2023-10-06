@@ -13,8 +13,26 @@
 </head>
 
 <?php
-// LOAD XML
+// Load XML inventory
 $xml = simplexml_load_file("inventory/inventory.xml") or die("Error: Cannot create object");
+
+// Copy XML into work array
+$loadedItems = [];
+foreach($xml->children() as $entry){
+    $entry->techdate = $entry->date->year . "-" . $entry->date->month . "-" . $entry->date->day;
+    $loadedItems[] = $entry;
+}
+
+// SORT ARRAY DEPENDING ON SETTINGS
+function compDate($a, $b){
+    if(isset($_GET["order"]) && $_GET["order"] === "ascending"){
+        return strtotime($a->techdate) - strtotime($b->techdate);
+    } else {
+        return strtotime($b->techdate) - strtotime($a->techdate);
+    }
+}
+usort($loadedItems, "compDate");
+
 
 function createEntry($entry, $counter){
     $class = ($counter % 2) > 0 ? "hidden item left": "hidden item right";
@@ -78,7 +96,7 @@ function createEntry($entry, $counter){
 
 function showSelection($selection){
     $counter = 0;
-    foreach($selection->children() as $entry){
+    foreach($selection as $entry){
         $counter++;
         createEntry($entry, $counter);
     }
@@ -90,7 +108,7 @@ function showSelection($selection){
 <?php include "components/filters.php"; ?>
 <?php include "components/background.php"; ?>
 <main>
-    <?php showSelection($xml); ?>
+    <?php showSelection($loadedItems); ?>
 </main>
 <?php include "components/footer.php"; ?>
 <script src="components/base.js"></script>
