@@ -14,7 +14,6 @@
             <tag>coding</tag>
         </tags>
         <description>inventory/entries/mazeBase.html</description>
-        <coding>inventory/entries/mazeBase_coding.html</coding>
         <thumbnail>thumbnails/maze.gif</thumbnail>
         <links>
             <link target="/demo/the_maze_base">generate mazes</link>

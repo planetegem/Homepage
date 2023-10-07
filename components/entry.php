@@ -22,18 +22,7 @@ function createEntry($entry, $counter){
     echo "<img src='{$entry->thumbnail}' alt=''></img>";
     echo "<div class='item-description'>";
     include $entry->description;
-
-    if ($entry->coding){
-        echo "<span onClick='toggleCoding(this)'>[read more]</span>";
-        echo "</div>";
-        echo "<div class='coding-field'>";
-        echo "<div>";
-        include $entry->coding;
-        echo "</div>";
-        echo "</div>";
-    } else {
-        echo "</div>";
-    }
+    echo "</div>";
 
     echo "<div class='item-links'>";
     foreach($entry->links->children() as $link){
