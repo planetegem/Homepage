@@ -186,15 +186,19 @@ main {
   margin: 0.4em 0.4em;
   font-size: 0.95em;
 }
-.item-body span {
+.item-body span, .item-body a {
   font-size: 0.9em;
   text-align: center;
   margin-top: 0.2em;
   opacity: 0.6;
 }
-.item-body span:hover {
+.item-body span:hover, .item-body a:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+.item-body h2 {
+  font-variant: small-caps;
+  text-decoration: underline;
 }
 .item-body .item-tags {
   font-size: 0.7em;
@@ -215,23 +219,6 @@ main {
   overflow: hidden;
   transition: max-height 0.2s ease-in-out;
 }
-.coding-field a {
-  font-size: 0.9em;
-  text-align: center;
-  margin-top: 0.2em;
-  opacity: 0.6;
-}
-.coding-field a:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-.coding-field h2 {
-  font-variant: small-caps;
-  text-decoration: underline;
-}
-.coding-field p {
-  font-size: 0.9em;
-}
 
 .item-links {
   margin: 1.25em 0.5em;
@@ -241,6 +228,8 @@ main {
 }
 .item-links a {
   font-size: 1.2em;
+  opacity: 1;
+  margin-top: 0;
   font-variant: small-caps;
   color: rgb(96, 96, 96);
   text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
@@ -250,26 +239,26 @@ main {
   flex-direction: row;
   align-items: center;
 }
+.item-links div svg {
+  height: 0.6em;
+  margin: 0 0.5em;
+  opacity: 0.9;
+}
+.item-links div svg:last-child {
+  transform: rotate(180deg);
+}
+.item-links div polygon {
+  stroke: #059547;
+  fill: rgb(96, 96, 96);
+}
 .item-links div:hover {
   cursor: pointer;
 }
 .item-links div:hover svg {
   opacity: 1;
 }
-.item-links div:hover a {
+.item-links div:hover :nth-child(2) {
   text-decoration: underline;
-}
-.item-links svg {
-  height: 0.6em;
-  margin: 0 0.5em;
-  opacity: 0.9;
-}
-.item-links svg:last-child {
-  transform: rotate(180deg);
-}
-.item-links polygon {
-  stroke: #059547;
-  fill: rgb(96, 96, 96);
 }
 
 @media only screen and (min-width: 600px) {
@@ -281,15 +270,15 @@ main {
     font-size: 0.95em;
   }
   .item.left .item-body img {
-    grid-column: 2/3;
+    grid-column: 2/span 1;
   }
-  .item.left .item-body .item-description {
-    grid-column: 1/2;
+  .item.left .item-body div:first-child {
+    grid-column: 1/span 1;
   }
-  .item.left .item-description p {
+  .item.left .item-body div:first-child p {
     text-align: left;
   }
-  .item.right .item-description p {
+  .item.right div:first-child p {
     text-align: right;
   }
   .item-body {
@@ -305,14 +294,13 @@ main {
     max-width: 95%;
     grid-row: 1/2;
   }
-  .item-body .item-description {
+  .item-body div:first-child {
     grid-row: 1/2;
   }
   .item-body .coding-field {
     margin-left: 2em;
     margin-right: 2em;
-    grid-column: 1/3;
-    grid-row: 2/3;
+    grid-column: 1/span 2;
   }
   .item-body .coding-field div {
     margin-top: 1em;
@@ -322,7 +310,6 @@ main {
   }
   .item-body .item-links {
     grid-column: 1/3;
-    grid-row: 3/4;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -381,10 +368,15 @@ footer a:hover {
 
 #menu-button-outline {
   background-color: #059547;
-  padding: 0.1em;
   clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  padding: 0.1em;
   margin-top: 1em;
   z-index: 10;
+}
+
+#filter-menu.active #menu-button-outline {
+  padding-bottom: 0;
+  margin-bottom: 0.1em;
 }
 
 .filter-button {
@@ -398,11 +390,6 @@ footer a:hover {
 
 .filter-button:hover {
   cursor: pointer;
-}
-
-#filter-menu.active #menu-button-outline {
-  padding-bottom: 0;
-  margin-bottom: 0.1em;
 }
 
 #menu-container {
@@ -470,17 +457,11 @@ footer a:hover {
 
 .submit-button {
   grid-column: 1/span 2;
+  justify-content: center;
+  margin: 1.5em 0;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 1.5em 0;
-}
-.submit-button input {
-  font-size: 1.4em;
-  font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
 }
 .submit-button svg {
   height: 0.6em;
@@ -494,6 +475,12 @@ footer a:hover {
   stroke: #059547;
   fill: rgb(96, 96, 96);
 }
+.submit-button input {
+  font-size: 1.4em;
+  font-variant: small-caps;
+  color: rgb(96, 96, 96);
+  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+}
 
 .submit-button:hover {
   cursor: pointer;
@@ -501,7 +488,7 @@ footer a:hover {
 .submit-button:hover svg {
   opacity: 1;
 }
-.submit-button:hover input {
+.submit-button:hover :nth-child(2) {
   text-decoration: underline;
 }
 

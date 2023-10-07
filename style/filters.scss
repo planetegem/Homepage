@@ -1,14 +1,7 @@
+@use "resources";
+
 @mixin clip-button {
     clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-}
-@mixin bold-menu {
-    font-variant: small-caps;
-    color: rgb(96, 96, 96);
-    text-shadow:
-        -1px -1px 0 #059547,  
-        1px -1px 0 #059547,
-        -1px 1px 0 #059547,
-        1px 1px 0 #059547;
 }
 #filter-menu {
     max-width: 85vw;
@@ -25,7 +18,7 @@
         margin-left: 1em;
         font-size: 0.95em;
         opacity: 0.75;
-        @include bold-menu;
+        @include resources.bold-letters;
         justify-self: start;
     }
     a:hover {
@@ -34,21 +27,11 @@
     }
 }
 #menu-button-outline {
-    background-color: #059547;
-    padding: 0.1em;
+    background-color: resources.$themeColor;
     @include clip-button;
+    padding: 0.1em;
     margin-top: 1em;
     z-index: 10;
-}
-.filter-button {
-    background-color: white;
-    padding: 0.5em 2em;
-    @include bold-menu;
-    @include clip-button;
-}
-
-.filter-button:hover {
-    cursor: pointer;
 }
 #filter-menu.active {
     #menu-button-outline {
@@ -56,7 +39,15 @@
         margin-bottom: 0.1em;
     }
 }
-
+.filter-button {
+    background-color: white;
+    padding: 0.5em 2em;
+    @include resources.bold-letters;
+    @include clip-button;
+}
+.filter-button:hover {
+    cursor: pointer;
+}
 #menu-container {
     position: relative;
     transform: translateY(-0.2em);
@@ -120,45 +111,18 @@
 }
 .submit-button {
     grid-column: 1 / span 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
     margin: 1.5em 0;
+    @include resources.large-button;
 
     input {
         font-size: 1.4em;
-        font-variant: small-caps;
-        color: rgb(96, 96, 96);
-        text-shadow:
-            -1px -1px 0 #059547,  
-            1px -1px 0 #059547,
-            -1px 1px 0 #059547,
-            1px 1px 0 #059547;
-    }
-    svg {
-        height: 0.6em;
-        margin: 0 0.5em;
-        opacity: 0.9;
-    }
-    svg:last-child {
-        transform: rotate(180deg);
-    }
-    polygon {
-        stroke: #059547;
-        fill: rgb(96, 96, 96);
+        @include resources.bold-letters;
     }
 }
 .submit-button:hover {
-    svg {
-        opacity: 1;
-    }
-    input {
-        text-decoration: underline;
-    }
-    cursor: pointer;
+    @include resources.large-button-hover;
 }
-
 .checkbox {
     display: grid;
     grid-template-columns: 1em auto;
@@ -199,7 +163,6 @@ input[type="checkbox"]::before, input[type="radio"]::before {
 input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
     transform: scale(1);
 }
-
 @media only screen and (min-width: 900px) {
     nav {
         font-size: min(2.8vh, 2.8vw);

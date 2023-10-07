@@ -1,12 +1,5 @@
-@mixin bold-letters {
-    font-variant: small-caps;
-    color: rgb(96, 96, 96);
-    text-shadow:
-        -1px -1px 0 #059547,  
-        1px -1px 0 #059547,
-        -1px 1px 0 #059547,
-        1px 1px 0 #059547;
-}
+@use "resources";
+
 @mixin folder-clip-left {
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 }
@@ -63,10 +56,9 @@ main {
         padding-left: 3.5em !important;
     }
 }
-
 .item-header-container {
     padding: 0.1em 0.1em 0;
-    background-color: #059547;
+    background-color: resources.$themeColor;
     max-width: 60%;
     text-align: center;
     transform: translateY(0.2em);
@@ -76,7 +68,7 @@ main {
     background-color: white;
     h1 {
         font-size: 1.5em;
-        @include bold-letters;
+        @include resources.bold-letters;
     }
     p {
         font-size: 0.9em;
@@ -86,7 +78,7 @@ main {
     }
 }
 .body-outline {
-    background-color: #059547;
+    background-color: resources.$themeColor;
     padding: 0.1em;
 }
 .item-body {
@@ -104,15 +96,19 @@ main {
         margin: 0.4em 0.4em;
         font-size: 0.95em;
     }
-    span {
+    span, a {
         font-size: 0.9em;
         text-align: center;
         margin-top: 0.2em;
         opacity: 0.6;
     }
-    span:hover {
+    span:hover, a:hover {
         opacity: 0.8;
         cursor: pointer;
+    }
+    h2 {
+        font-variant: small-caps;
+        text-decoration: underline;
     }
     .item-tags {
         font-size: 0.7em;
@@ -132,24 +128,6 @@ main {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
-    a {
-        font-size: 0.9em;
-        text-align: center;
-        margin-top: 0.2em;
-        opacity: 0.6;
-    }
-    a:hover {
-        opacity: 0.8;
-        cursor: pointer;
-    }
-    h2 {
-        font-variant: small-caps;
-        text-decoration: underline;
-    }
-    p {
-        font-size: 0.90em;
-    }
-    
 }
 .item-links {
     margin: 1.25em 0.5em;
@@ -158,36 +136,17 @@ main {
     justify-content: space-around;
     a {
         font-size: 1.2em;
-        @include bold-letters;
+        opacity: 1;
+        margin-top: 0;
+        @include resources.bold-letters;
     }
     div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include resources.large-button;
     }
     div:hover {
-        svg {
-            opacity: 1;
-        }
-        a {
-            text-decoration: underline;
-        }
-        cursor: pointer;
-    }
-    svg {
-        height: 0.6em;
-        margin: 0 0.5em;
-        opacity: 0.9;
-    }
-    svg:last-child {
-        transform: rotate(180deg);
-    }
-    polygon {
-        stroke: #059547;
-        fill: rgb(96, 96, 96);
+        @include resources.large-button-hover;
     }
 }
-
 
 @media only screen and (min-width: 600px) {
     .item {
@@ -200,22 +159,18 @@ main {
     .item.left {
         .item-body {
             img {
-                grid-column: 2 / 3;
+                grid-column: 2 / span 1;
             }
-            .item-description {
-                grid-column: 1 / 2;
-            }
-        }
-    }
-    .item.left {
-        .item-description {
-            p {
-                text-align: left;
+            div:first-child {
+                grid-column: 1 / span 1;
+                p {
+                    text-align: left;
+                }
             }
         }
     }
     .item.right {
-        .item-description {
+        div:first-child {
             p {
                 text-align: right;
             }
@@ -233,14 +188,13 @@ main {
             max-width: 95%;
             grid-row: 1 / 2;
         }
-        .item-description {
+        div:first-child {
             grid-row: 1 / 2;
         }
         .coding-field {
             margin-left: 2em;
             margin-right: 2em;
-            grid-column: 1 / 3;
-            grid-row: 2 / 3;
+            grid-column: 1 / span 2;
             div {
                 margin-top: 1em;
             }
@@ -250,7 +204,6 @@ main {
         }
         .item-links {
             grid-column: 1 / 3;
-            grid-row: 3 / 4;
         }
     }
 }

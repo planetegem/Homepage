@@ -1,8 +1,9 @@
+@use "resources";
 
 #fps-counter {
     position: fixed;
     font-family: 'Orbitron' sans-serif;
-    color: #059547;
+    color: resources.$themeColor;
     left: 1em;
     top: 0.5em;
     opacity: 0.8;

@@ -1,0 +1,38 @@
+$themeColor: #059547;
+$grey: rgb(96, 96, 96);
+
+@mixin bold-letters {
+    font-variant: small-caps;
+    color: $grey;
+    text-shadow:
+        -1px -1px 0 $themeColor,  
+        1px -1px 0 $themeColor,
+        -1px 1px 0 $themeColor,
+        1px 1px 0 $themeColor;
+}
+@mixin large-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    svg {
+        height: 0.6em;
+        margin: 0 0.5em;
+        opacity: 0.9;
+    }
+    svg:last-child {
+        transform: rotate(180deg);
+    }
+    polygon {
+        stroke: $themeColor;
+        fill: $grey;
+    }
+}
+@mixin large-button-hover {
+    svg {
+        opacity: 1;
+    }
+    :nth-child(2) {
+        text-decoration: underline;
+    }
+    cursor: pointer;
+}

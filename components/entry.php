@@ -20,9 +20,7 @@ function createEntry($entry, $counter){
     echo "<h4 class='item-tags'>{$tags}</h4>";
     
     echo "<img src='{$entry->thumbnail}' alt=''></img>";
-    echo "<div class='item-description'>";
     include $entry->description;
-    echo "</div>";
 
     echo "<div class='item-links'>";
     foreach($entry->links->children() as $link){
