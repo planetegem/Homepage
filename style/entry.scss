@@ -130,7 +130,7 @@ main {
     transition: max-height 0.2s ease-in-out;
 }
 .item-links {
-    margin: 1.25em 0.5em;
+    margin: 1.75em 0.5em;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -170,9 +170,11 @@ main {
         }
     }
     .item.right {
-        div:first-child {
-            p {
-                text-align: right;
+        .item-body {
+            div:first-child {
+                p {
+                    text-align: right;
+                }
             }
         }
     }

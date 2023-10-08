@@ -148,7 +148,7 @@
             <tag>game</tag>
         </tags>
         <description>inventory/entries/polmem_legacy.html</description>
-        <thumbnail>thumbnails/pm_icon.png</thumbnail>
+        <thumbnail>thumbnails/pm_legacy.png</thumbnail>
         <links>
             <link target="/eb/political_memory">play game</link>
         </links>
@@ -244,7 +244,7 @@
             <tag>flowchart</tag>
         </tags>
         <description>inventory/entries/katergeil.html</description>
-        <thumbnail>thumbnails/eb_logo.svg</thumbnail>
+        <thumbnail>thumbnails/eb.svg</thumbnail>
         <links>
             <link target="/eb/katergeil">visit entry</link>
         </links>
@@ -281,10 +281,28 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/lipide1.html</description>
-        <thumbnail>thumbnails/vk_logo.png</thumbnail>
+        <thumbnail>thumbnails/lipide1.png</thumbnail>
         <links>
             <link target="/vk/index.php?d=01&amp;h=01">read chapter</link>
             <link target ="/vk/pdf/d01h01.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
+        <title>Het Vleeskanon van Clementijn</title>
+        <date>
+            <year>2021</year>
+            <month>08</month>
+            <day>04</day>
+        </date>
+        <language>dutch</language>
+        <type>project</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/vleeskanon.html</description>
+        <thumbnail>thumbnails/vk_logo.png</thumbnail>
+        <links>
+            <link target="/vk">table of contents</link>
         </links>
     </entry> 
 </inventory>

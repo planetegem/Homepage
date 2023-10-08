@@ -221,7 +221,7 @@ main {
 }
 
 .item-links {
-  margin: 1.25em 0.5em;
+  margin: 1.75em 0.5em;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -278,7 +278,7 @@ main {
   .item.left .item-body div:first-child p {
     text-align: left;
   }
-  .item.right div:first-child p {
+  .item.right .item-body div:first-child p {
     text-align: right;
   }
   .item-body {

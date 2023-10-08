@@ -1,25 +1,30 @@
 <div>
     <p>
-        The Maze Base, the place where mazes come to graze: be hypnotized by these maze generation algorithms in action!
+        The Maze Base, the place where mazes come to graze: be hypnotized by maze generation algorithms in action!
     </p>
     <p>
-        Algorithms will be added from time to time, so be sure to come back every so often. 
-        Once every hour should be enough.
+        Algorithms will be added from time to time, so be sure to come back every so often: 
+        once every hour should be enough to catch every update.
     </p>
     <span onClick='toggleCoding(this)'>[read more]</span>
 </div>
 <div class='coding-field'>
     <div>
-        <h2>why and how?</h2>
+        <h2>What? Why? How?!</h2>
         <p>
-            The goal of the Maze Base was to familiarize myself with Typescript and lean a bit more into OOP.
-            I also wanted to a page that allows easy adding of new algorithms without having to revisit any of the basic mechanics of the page.
+            I wanted 2 things from this project: (1) an excuse to familiarize myself with Typescript and (2) a playground to have fun with maze generation algorithms.
+            </br>
+            This meant a simple framework to add new algorithms, as I didn't want to have to revisit the base mechanics of the page whenever I wanted to add a new algorithm.
         </p>
         <p>
-            The solution was a basic class which contained some standard methods (ie. create a coordinate field, helper functions, animation functions, etc).
-            This base class is then extended whenever I add a new algorithm. Calling the constructor results in a 3D array (dimensions being x, y & time).
-            This class is passed into a function that's called when clicking the play button. This is also where the canvas animations are handled (with methods inherited from the base class).
-        </p>
+            The result was achieved with an object-oriented approach.
+            A basic class provides the methods to generate a coordinate field and draw the maze on a canvas,
+            which is then extended with the algorithm to generate the maze (the recursion method).
+            An animation function takes a maze generation class as argument. 
+            <br>
+            When calling the constructor of this class, a 3D array is created to represent the maze (a 2D maze extended along a time dimension).
+            The animation function then uses the internal draw method of the class to interpret the 2D mazes on a canvas, as it changes along the time dimension.
+         </p>
         <a href="https://github.com/planetegem/MazeBase">[view on github]</a>
     </div>
 </div>
