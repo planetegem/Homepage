@@ -7,7 +7,7 @@
     max-width: 85vw;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    font-size: 18px;
+    font-size: 16px;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -67,7 +67,7 @@
 .menu-body {
     background-color: white;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     align-items: center;
     padding-bottom: 1em;
     padding-top: 0.8em;
@@ -163,15 +163,20 @@ input[type="checkbox"]::before, input[type="radio"]::before {
 input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
     transform: scale(1);
 }
-@media only screen and (min-width: 900px) {
-    nav {
-        font-size: min(2.8vh, 2.8vw);
+@media only screen and (min-width: 475px) {
+    #filter-menu {
+        font-size: 18px;
+    }
+    .menu-body {
+        grid-template-columns: min-content auto;
     }
 }
+
 @media only screen and (min-width: 900px) {
     nav {
         min-width: 650px;
         max-width: 85vw;
         width: 42.5vw;
+        font-size: min(2.8vh, 2.8vw);
     }
 }

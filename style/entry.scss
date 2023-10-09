@@ -20,14 +20,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 95vw;
+    max-width: 98%;
     min-height: 100vh;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 .item {
     display: grid;
-    justify-items: start;
+    justify-items: center;
     font-size: 18px;
     margin: 1em 0;
 }
@@ -38,32 +38,13 @@ main {
     visibility: visible;
     animation: jump-in-frame 0.5s ease-in-out;
 }
-.item.left {
-    justify-items: start;
-    .item-header-container, .item-header {
-        @include folder-clip-left;
-    }
-    .item-header {
-        padding-right: 3.5em !important;
-    }
-}
-.item.right {
-    justify-items: end;
-    .item-header-container, .item-header {
-        @include folder-clip-right;
-    }
-    .item-header{
-        padding-left: 3.5em !important;
-    }
-}
 .item-header-container {
     padding: 0.1em 0.1em 0;
     background-color: resources.$themeColor;
-    max-width: 60%;
     text-align: center;
+    width: 100%;
     transform: translateY(0.2em);
 }
-
 .item-header {
     padding: 0.75em 1em;
     background-color: white;
@@ -81,6 +62,7 @@ main {
 .body-outline {
     background-color: resources.$themeColor;
     padding: 0.1em;
+    width: 100%;
 }
 .item-body {
     padding: 0.75em 1em;
@@ -118,6 +100,8 @@ main {
         bottom: 0.3em;
         font-family: monospace;
         left: 0; right: 0;
+        max-width: 85%;
+        margin: auto;
     }
 }
 .opened {
@@ -146,6 +130,30 @@ main {
     }
     div:hover {
         @include resources.large-button-hover;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    .item.left {
+        justify-items: start;
+        .item-header-container, .item-header {
+            @include folder-clip-left;
+        }
+        .item-header {
+            padding-right: 3.5em !important;
+        }
+    }
+    .item.right {
+        justify-items: end;
+        .item-header-container, .item-header {
+            @include folder-clip-right;
+        }
+        .item-header{
+            padding-left: 3.5em !important;
+        }
+    }
+    .item-header-container {
+        max-width: 60%;
     }
 }
 @media only screen and (min-width: 600px) {
