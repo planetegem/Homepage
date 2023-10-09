@@ -3,6 +3,7 @@ function toggleCoding(element){
 
     let next = element.parentElement.parentElement.getElementsByClassName("coding-field")[0];
     next.style.maxHeight = next.scrollHeight + "px";
+    next.scrollIntoView({behavior: "smooth", block: "center"});
 }
 
 let animationAllowed = false;
@@ -30,10 +31,12 @@ function checkInView(delay = 0){
         }
     }
 }
+history.scrollRestoration = "manual";
 window.addEventListener("load", () => {
     setTimeout(() => {
         animationAllowed = true;
         checkInView(200);
     }, 2200);
+    window.scrollTo(0, 0);
 });
 window.addEventListener("scroll", checkInView);

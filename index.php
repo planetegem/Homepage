@@ -1,7 +1,6 @@
 <?php session_start(); ?>
 
 <?php
-
 // Convert post data into get data
 if ($_SERVER["REQUEST_METHOD"] === "POST"){
     $_SESSION["posting"] = true;

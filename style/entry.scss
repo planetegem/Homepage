@@ -63,6 +63,7 @@ main {
     text-align: center;
     transform: translateY(0.2em);
 }
+
 .item-header {
     padding: 0.75em 1em;
     background-color: white;
@@ -147,7 +148,6 @@ main {
         @include resources.large-button-hover;
     }
 }
-
 @media only screen and (min-width: 600px) {
     .item {
         font-size: min(2.8vh, 2.8vw);

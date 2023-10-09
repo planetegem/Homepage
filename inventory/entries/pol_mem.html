@@ -1,0 +1,29 @@
+<div>
+    <p>
+        Political Memory is back, now with 12 politicians and 7 random events! 
+        Can you find them all? More cards and events will be added as time goes by.
+    </p>
+    <p>
+        A desktop-only version of the game is available on itch, which will be updated most frequently. 
+        A mobile version can be played locally.
+    </p>
+    <span onClick='toggleCoding(this)'>[read more]</span>
+</div>
+<div class='coding-field'>
+    <div>
+        <h2>Why and how</h2>
+        <p>
+            I had wanted to revisit Political Memory for a while to add some more complexity to its gameplay in the form of random events.
+            I also wanted the game to feel more like a stand-alone app, instead of the rather basic webpage it was.
+            Finally, game progress needed to be made persistent by saving it in browser local storage.
+            <br>
+            Doing this and learning React at the same time seemed like a win/win.
+        </p>
+        <p>
+            The biggest challenge here was the data being passed around between React components.
+            As React works asynchronously, it was difficult to predict if the data inside components was up-to-date
+            (for example if 2 different components were to trigger a render of the parent component at the same time).
+        </p> 
+        <a href="https://github.com/planetegem/PolMem">[view on github]</a>
+    </div>
+</div>
