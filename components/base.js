@@ -31,12 +31,14 @@ function checkInView(delay = 0){
         }
     }
 }
-history.scrollRestoration = "manual";
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        animationAllowed = true;
-        checkInView(200);
-    }, 2200);
-    window.scrollTo(0, 0);
-});
+// Wait for bg animation to finish, then start considering inventory items
+setTimeout(() => {
+    animationAllowed = true;
+    checkInView(200);
+}, 2200);
 window.addEventListener("scroll", checkInView);
+
+// Reset scroll after reload (for F5ers)
+history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+

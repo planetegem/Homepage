@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    ob_start();
+?>
 
 <?php
 // Convert post data into get data
@@ -166,4 +169,5 @@ unset($_SESSION["languages"]);
 unset($_SESSION["types"]);
 unset($_SESSION["tags"]);
 unset($_SESSION["posting"]);
+ob_end_flush();
 ?>

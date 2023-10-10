@@ -447,8 +447,9 @@ footer a:hover {
 .menu-body .subfilter {
   display: flex;
   flex-flow: row wrap;
-  padding: 0.75em 0.5em;
+  padding: 0.75em 0.25em;
   justify-content: flex-start;
+  font-size: 0.9em;
 }
 .menu-body span {
   grid-column: 1/span 2;
@@ -502,7 +503,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: 1em auto;
   align-items: center;
-  max-width: 40%;
+  max-width: 60%;
   font-family: monospace;
   font-variant: small-caps;
   font-weight: bold;
@@ -547,11 +548,15 @@ input[type=checkbox]:checked::before, input[type=radio]:checked::before {
     font-size: 18px;
   }
   .menu-body {
-    grid-template-columns: min-content auto;
+    grid-template-columns: auto auto;
+  }
+  .checkbox {
+    font-size: 1em;
+    max-width: 40%;
   }
 }
 @media only screen and (min-width: 900px) {
-  nav {
+  #filter-menu {
     min-width: 650px;
     max-width: 85vw;
     width: 42.5vw;
