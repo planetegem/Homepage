@@ -1,6 +1,11 @@
 <?php
 function createEntry($entry, $counter){
     $class = ($counter % 2) > 0 ? "hidden item left": "hidden item right";
+    if (!$entry->thumbnail){
+        $class = $class . " update";
+    } else {
+        $class = $class . " image";
+    }
     echo "<segment class='{$class}'>";
     echo "<div class='item-header-container'>";
     echo "<div class='item-header'>";
@@ -18,8 +23,9 @@ function createEntry($entry, $counter){
         $tags = $tags . ", " . $tag;
     }
     echo "<h4 class='item-tags'>{$tags}</h4>";
-    
-    echo "<img src='{$entry->thumbnail}' alt=''></img>";
+    if ($entry->thumbnail){
+        echo "<img src='{$entry->thumbnail}' alt=''></img>";
+    }
     include $entry->description;
 
     echo "<div class='item-links'>";

@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventory>
+<entry>
+    <title>Return of the Mask</title>
+        <date>
+            <year>2023</year>
+            <month>10</month>
+            <day>11</day>
+        </date>
+        <language>english</language>
+        <type>update</type>
+        <tags>
+            <tag>demo</tag>
+        </tags>
+        <description>inventory/entries/masktopia.html</description>
+        <links>
+            <link target="https://www.planetegem.be/demo/the_maze_base#octagon">start generating</link>
+        </links>
+    </entry>
     <entry>
         <title>Political Memory</title>
         <date>
