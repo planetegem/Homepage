@@ -10,7 +10,11 @@ function createEntry($entry, $counter){
     echo "<div class='item-header-container'>";
     echo "<div class='item-header'>";
     echo "<h1>" . $entry->title . "</h1>";
-    echo "<p>[added on " . $entry->date->day . "-" . $entry->date->month . "-" . $entry->date->year . "]</p>";
+    if (!$entry->update){
+        echo "<p>[added on " . $entry->date->day . "-" . $entry->date->month . "-" . $entry->date->year . "]</p>";
+    } else {
+        echo "<p>[updated on " . $entry->update->day . "-" . $entry->update->month . "-" . $entry->update->year . "]</p>";
+    }
     echo "</div>";
     echo "</div>";
     
@@ -18,7 +22,7 @@ function createEntry($entry, $counter){
     echo "<div class='item-body'>";
     
     // Create list of tags
-    $tags = "tags: " . $entry->language . ", " . $entry->type;
+    $tags = "tags: " . $entry->language;
     foreach($entry->tags->children() as $tag){
         $tags = $tags . ", " . $tag;
     }

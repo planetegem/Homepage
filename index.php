@@ -63,11 +63,6 @@ if (isset($_GET["language"])){
     $getLanguages = str_replace("~", " ", $getLanguages);
     $_SESSION["languages"] = $getLanguages;
 }
-if (isset($_GET["type"])){
-    $getTypes = explode(" ", $_GET["type"]);
-    $getTypes = str_replace("~", " ", $getTypes);
-    $_SESSION["types"] = $getTypes;
-}
 if (isset($_GET["tag"])){
     $getTags = explode(" ", $_GET["tag"]);
     $getTags = str_replace("~", " ", $getTags);
@@ -106,17 +101,6 @@ function checkFilter($item){
                 return false;
             }
         }
-        if (isset($_SESSION["types"])){
-            $typeIncluded = false;
-            foreach($_SESSION["types"] as $typeFilter){
-                if ($typeFilter == $item->type){
-                    $typeIncluded = true;
-                }
-            }
-            if ($typeIncluded === false){
-                return false;
-            }
-        }
         if (isset($_SESSION["tags"])){
             $tagsArray = array();
             foreach($item->tags->children() as $currentTag){
@@ -132,10 +116,13 @@ function checkFilter($item){
         return true;
 }
 
-
 $loadedItems = [];
 foreach($xml->children() as $entry){
-    $entry->techdate = $entry->date->year . "-" . $entry->date->month . "-" . $entry->date->day;
+    if (!$entry->update){
+        $entry->techdate = $entry->date->year . "-" . $entry->date->month . "-" . $entry->date->day;
+    } else {
+        $entry->techdate = $entry->update->year . "-" . $entry->update->month . "-" . $entry->update->day;
+    }
     if(checkFilter($entry)){
         $loadedItems[] = $entry;
     }

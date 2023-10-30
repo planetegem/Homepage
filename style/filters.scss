@@ -1,67 +1,82 @@
 @use "resources";
 
 @mixin clip-button {
-    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    clip-path: polygon(0 50%, 0 -1.2em, 100% -1.2em, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
 }
 #filter-menu {
     max-width: 85vw;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     font-size: 16px;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-    justify-items: end;
+    position: relative;
+    display: flex;
 
     a {
-        margin-top: 1em;
+        padding-top: 0.6em;
         margin-left: 1em;
         font-size: 0.95em;
         opacity: 0.75;
         @include resources.bold-letters;
-        justify-self: start;
     }
     a:hover {
         cursor: pointer;
         opacity: 1;
     }
 }
+#menu-overlay {
+    position: absolute;
+    width: 100vw;
+    height: 300vh;
+    left: 0; right: 0; top: 0;
+    margin: auto;
+    z-index: 5;
+    opacity: 0.2;
+    background-color: resources.$themeColor;
+    opacity: 0;
+    visibility: hidden;  
+}
+#menu-container-top {
+    position: absolute;
+    top: 0; right: 0; left: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-items: end;
+    z-index: 10;
+    pointer-events: none;
+}
 #menu-button-outline {
     background-color: resources.$themeColor;
     @include clip-button;
     padding: 0.1em;
-    margin-top: 1em;
+    padding-top: 0;
+    margin-top: -0.1em;
     z-index: 10;
-}
-#filter-menu.active {
-    #menu-button-outline {
-        padding-bottom: 0;
-        margin-bottom: 0.1em;
-    }
+    position: relative;
+    grid-column: 2 / span 1;
 }
 .filter-button {
     background-color: white;
-    padding: 0.5em 2em;
+    padding: 0.6em 2em 0.75em;
     @include resources.bold-letters;
     @include clip-button;
+    pointer-events: all;
 }
 .filter-button:hover {
     cursor: pointer;
 }
 #menu-container {
     position: relative;
-    transform: translateY(-0.2em);
-    margin-top: -0.1em;
     width: 100%;
     z-index: 9;
     grid-column: 1 / span 2;
+    pointer-events: all;
 }
 #menu-outline {
-    padding: 0.1em;
+    padding: 0 0.1em 0.1em;
     background-color: #059547;
-    position: absolute;
-    overflow: hidden;
     max-height: 0;
+    overflow: hidden;
     visibility: hidden;
 }
 .menu-body {
@@ -113,7 +128,8 @@
 .submit-button {
     grid-column: 1 / span 2;
     justify-content: center;
-    margin: 1.5em 0;
+    margin: 1.5em 0.5em 0.5em;
+    text-align: center;
     @include resources.large-button;
 
     input {
