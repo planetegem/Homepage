@@ -3,12 +3,17 @@ $grey: rgb(96, 96, 96);
 
 @mixin bold-letters {
     font-variant: small-caps;
-    color: $grey;
-    text-shadow:
-        -1px -1px 0 $themeColor,  
-        1px -1px 0 $themeColor,
-        -1px 1px 0 $themeColor,
-        1px 1px 0 $themeColor;
+    color: $themeColor;
+    font-weight: bold;
+    @media only screen and (min-width: 450px) {
+        font-weight: normal;
+        color: $grey;
+        text-shadow:
+            -1px -1px 0 $themeColor,  
+            1px -1px 0 $themeColor,
+            -1px 1px 0 $themeColor,
+            1px 1px 0 $themeColor;
+    }
 }
 @mixin large-button {
     display: flex;

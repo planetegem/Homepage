@@ -140,8 +140,15 @@ main {
 .item-header h1 {
   font-size: 1.5em;
   font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  color: #059547;
+  font-weight: bold;
+}
+@media only screen and (min-width: 450px) {
+  .item-header h1 {
+    font-weight: normal;
+    color: rgb(96, 96, 96);
+    text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  }
 }
 .item-header p {
   font-size: 0.9em;
@@ -218,8 +225,15 @@ main {
   opacity: 1;
   margin-top: 0;
   font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  color: #059547;
+  font-weight: bold;
+}
+@media only screen and (min-width: 450px) {
+  .item-links a {
+    font-weight: normal;
+    color: rgb(96, 96, 96);
+    text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  }
 }
 .item-links div {
   display: flex;
@@ -371,9 +385,16 @@ footer a:hover {
   font-size: 0.95em;
   opacity: 0.75;
   font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  color: #059547;
+  font-weight: bold;
   justify-self: start;
+}
+@media only screen and (min-width: 450px) {
+  #filter-menu a {
+    font-weight: normal;
+    color: rgb(96, 96, 96);
+    text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  }
 }
 #filter-menu a:hover {
   cursor: pointer;
@@ -397,9 +418,16 @@ footer a:hover {
   background-color: white;
   padding: 0.5em 2em;
   font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  color: #059547;
+  font-weight: bold;
   clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+@media only screen and (min-width: 450px) {
+  .filter-button {
+    font-weight: normal;
+    color: rgb(96, 96, 96);
+    text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  }
 }
 
 .filter-button:hover {
@@ -493,8 +521,15 @@ footer a:hover {
 .submit-button input {
   font-size: 1.4em;
   font-variant: small-caps;
-  color: rgb(96, 96, 96);
-  text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  color: #059547;
+  font-weight: bold;
+}
+@media only screen and (min-width: 450px) {
+  .submit-button input {
+    font-weight: normal;
+    color: rgb(96, 96, 96);
+    text-shadow: -1px -1px 0 #059547, 1px -1px 0 #059547, -1px 1px 0 #059547, 1px 1px 0 #059547;
+  }
 }
 
 .submit-button:hover {
