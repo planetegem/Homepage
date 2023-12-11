@@ -14,3 +14,5 @@ REQUIREMENTS:
         -> POST request is translated into custom key pairs
         -> user is redirected to page with GET request
         -> GET request is used to interpret filters
+
+  ![Alt text](https://github.com/planetegem/MazeBase/blob/master/build/assets/brain.png?raw=true "Title")
