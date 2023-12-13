@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventory>
     <entry>
+        <title>Mammon Billing</title>
+        <date>
+            <year>2023</year>
+            <month>12</month>
+            <day>13</day>
+        </date>
+        <language>dutch</language>
+        <type>project</type>
+        <tags>
+            <tag>demo</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/mammon.html</description>
+        <thumbnail>thumbnails/mammon.png</thumbnail>
+        <links>
+            <link target="demo/mammon_billing">read description (Dutch)</link>
+            <link target="https://github.com/planetegem/mammon_billing">view on github</link>
+        </links>
+    </entry>
+    <entry>
         <title>Political Memory</title>
         <date>
+            <year>2022</year>
+            <month>10</month>
+            <day>02</day>
+        </date>
+        <update>
             <year>2023</year>
             <month>09</month>
             <day>22</day>
-        </date>
+        </update>
         <language>english</language>
         <type>project</type>
         <tags>
@@ -16,8 +41,8 @@
         <description>inventory/entries/pol_mem.html</description>
         <thumbnail>thumbnails/logo-promo.png</thumbnail>
         <links>
-            <link target="https://planetegem.itch.io/political-memory">play on itch</link>
-            <link target="eb/political_memory">play locally</link>
+            <link target="https://planetegem.itch.io/political-memory">play on itch (desktop)</link>
+            <link target="eb/political_memory_legacy">play locally (legacy)</link>
         </links>
     </entry>
     <entry>
@@ -157,25 +182,6 @@
         <links>
             <link target="/vk/index.php?d=02&amp;h=01">read chapter</link>
             <link target ="/vk/pdf/d02h01.pdf">download pdf</link>
-        </links>
-    </entry>
-    <entry>
-        <title>Political Memory (legacy)</title>
-        <date>
-            <year>2022</year>
-            <month>10</month>
-            <day>02</day>
-        </date>
-        <language>english</language>
-        <type>project</type>
-        <tags>
-            <tag>coding</tag>
-            <tag>game</tag>
-        </tags>
-        <description>inventory/entries/polmem_legacy.html</description>
-        <thumbnail>thumbnails/pm_legacy.png</thumbnail>
-        <links>
-            <link target="/eb/political_memory">play game</link>
         </links>
     </entry>
     <entry>

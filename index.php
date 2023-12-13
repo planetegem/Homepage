@@ -82,6 +82,7 @@ if (isset($_GET["tag"])){
     <title>Planetegem - the Belgian creative repository.</title>
     <meta name="author" content="Niels Van Damme">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <?php
