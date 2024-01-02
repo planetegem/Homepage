@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventory>
     <entry>
+        <title>Ararat-III</title>
+        <date>
+            <year>2023</year>
+            <month>12</month>
+            <day>31</day>
+        </date>
+        <language>dutch</language>
+        <type>update</type>
+        <tags>
+            <tag>het vleeskanon</tag>
+        </tags>
+        <description>inventory/entries/ararat3.html</description>
+        <thumbnail>thumbnails/ararat-3.png</thumbnail>
+        <links>
+            <link target="/vk/index.php?d=02&amp;h=03">read chapter</link>
+            <link target ="/vk/pdf/d02h03.pdf">download pdf</link>
+        </links>
+    </entry>
+    <entry>
         <title>Mammon Billing</title>
         <date>
             <year>2023</year>
