@@ -76,3 +76,13 @@ document.getElementById("menu-overlay").addEventListener("click", (e) => {
         currentFrame = requestAnimationFrame(animateClose);
     }
 });
+
+document.getElementById("close-filter-menu").addEventListener("click", (e) => {
+    if (document.getElementById("filter-menu").classList.contains("active") && !document.getElementById("filter-menu").classList.contains("closing")){
+        cancelAnimationFrame(currentFrame);
+        animationStart = Date.now();
+            
+        document.getElementById("filter-menu").classList.add("closing");
+        currentFrame = requestAnimationFrame(animateClose);
+    }
+});

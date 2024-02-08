@@ -97,7 +97,7 @@ $uniqueLanguages = array_unique($uniqueLanguages);
                         </div>
                     </div>
                     
-                    <span class="close-menu" onclick="toggleMenu()">[close menu without applying]</span>
+                    <span id="close-filter-menu">[close menu without applying]</span>
                 </form>
             </div>
         </div>
