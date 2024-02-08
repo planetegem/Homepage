@@ -3,11 +3,10 @@ let animationStart, currentFrame;
 
 function toggleMenu(){
     if (document.getElementById("filter-menu").classList.contains("active") && !document.getElementById("filter-menu").classList.contains("closing")){
-        cancelAnimationFrame(currentFrame);
-        animationStart = Date.now();
-        
-        document.getElementById("filter-menu").classList.add("closing");
-        currentFrame = requestAnimationFrame(animateClose);
+        // Check if anything has changed in the form: if so, submit
+        let form = document.getElementById("menu-outline").querySelector("form");
+        form.submit();
+
     } else if (!document.getElementById("filter-menu").classList.contains("closing")){
         cancelAnimationFrame(currentFrame);
         animationStart = Date.now();

@@ -96,16 +96,8 @@ $uniqueLanguages = array_unique($uniqueLanguages);
                             <label for="ascending">ascending</label>
                         </div>
                     </div>
-                    <div class="submit-button">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 34">
-                            <polygon points="0 0 56.7 17.3 0 34 0 0"/>
-                        </svg>
-                        <input type="submit" value="confirm filters" name="submit">
-                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.7 34">
-                            <polygon points="0 0 56.7 17.3 0 34 0 0"/>
-                        </svg>
-                    </div> 
-                    <span class="close-menu" onclick="toggleMenu()">[close menu]</span>
+                    
+                    <span class="close-menu" onclick="toggleMenu()">[close menu without applying]</span>
                 </form>
             </div>
         </div>

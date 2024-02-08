@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventory>
+<entry>
+    <title>Mangerie</title>
+        <date>
+            <year>2024</year>
+            <month>01</month>
+            <day>25</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>demo</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/mangerie.html</description>
+        <thumbnail>thumbnails/mangerie.png</thumbnail>
+        <links>
+            <link target="demo/mangerie">download</link>
+            <link target="https://github.com/planetegem/mangerie">view on github</link>
+        </links>
+    </entry>
     <entry>
         <title>Ararat-III</title>
         <date>
@@ -72,9 +92,9 @@
             <day>24</day>
         </date>
         <update>
-            <year>2023</year>
-            <month>10</month>
-            <day>11</day>
+            <year>2024</year>
+            <month>01</month>
+            <day>10</day>
         </update>
         <language>english</language>
         <type>project</type>
@@ -95,6 +115,11 @@
             <month>08</month>
             <day>08</day>
         </date>
+        <update>
+            <year>2024</year>
+            <month>02</month>
+            <day>08</day>
+        </update>
         <language>english</language>
         <type>project</type>
         <tags>

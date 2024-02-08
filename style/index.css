@@ -513,7 +513,7 @@ footer a:hover {
   grid-column: 1/span 2;
   opacity: 0.6;
   font-size: 0.8em;
-  margin: 0 auto;
+  margin: 0.75em auto 0;
 }
 .menu-body span:hover {
   cursor: pointer;
@@ -607,6 +607,10 @@ input[type=checkbox]::before, input[type=radio]::before {
 
 input[type=checkbox]:checked::before, input[type=radio]:checked::before {
   transform: scale(1);
+}
+
+.active .filter-button:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 475px) {
