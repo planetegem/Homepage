@@ -6,7 +6,7 @@ function createEntry($entry, $counter){
     } else {
         $class = $class . " image";
     }
-    echo "<segment class='{$class}'>";
+    echo "<article class='{$class}'>";
     echo "<div class='item-header-container'>";
     echo "<div class='item-header'>";
     echo "<h1>" . $entry->title . "</h1>";
@@ -53,7 +53,7 @@ function createEntry($entry, $counter){
     echo "</div>";
     echo "</div>";
     echo "</div>";
-    echo "</segment>";
+    echo "</article>";
 }
 function showSelection($selection){
     $counter = 0;
