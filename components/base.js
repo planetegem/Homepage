@@ -35,7 +35,7 @@ function checkInView(delay = 0){
 setTimeout(() => {
     animationAllowed = true;
     checkInView(200);
-}, 2200);
+}, 1500);
 window.addEventListener("scroll", checkInView);
 
 // Reset scroll after reload (for F5ers)

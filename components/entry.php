@@ -26,7 +26,7 @@ function createEntry($entry, $counter){
     foreach($entry->tags->children() as $tag){
         $tags = $tags . ", " . $tag;
     }
-    echo "<h4 class='item-tags'>{$tags}</h4>";
+    echo "<p class='item-tags'>{$tags}</p>";
     if ($entry->thumbnail){
         echo "<img src='{$entry->thumbnail}' alt=''></img>";
     }

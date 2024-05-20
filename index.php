@@ -70,21 +70,6 @@ if (isset($_GET["tag"])){
 }
 ?>
 
-<!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl">
-<head>
-    <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
-    <meta name="description" content="Online Belgian platform for multimedial creative work. Submissions welcome!">
-    <meta name="keywords" content="encyclopedia Belgica, culture, vleeskanon, sci-fi belgian novel, political memory, definitions, Belgium">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="notranslate">
-    <title>Planetegem - the Belgian creative repository.</title>
-    <meta name="author" content="Niels Van Damme">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-
 <?php
 // Load XML inventory
 $xml = simplexml_load_file("inventory/inventory.xml") or die("Error: Cannot create object");
@@ -139,6 +124,24 @@ function compDate($a, $b){
 }
 usort($loadedItems, "compDate");
 ?>
+
+
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl">
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+    <meta name="keywords" content="encyclopedia Belgica, culture, vleeskanon, sci-fi belgian novel, political memory, definitions, Belgium">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="notranslate">
+    <meta name="author" content="Niels Van Damme">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <?php include "components/structured_data.php"; ?>
+    
+</head>
+
+
 
 <body>
     <?php include "components/filters.php"; ?>

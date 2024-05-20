@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inventory>
-<entry>
+    <entry>
+    <title>Mangerie Online</title>
+        <date>
+            <year>2024</year>
+            <month>05</month>
+            <day>05</day>
+        </date>
+        <language>english</language>
+        <type>project</type>
+        <tags>
+            <tag>game</tag>
+            <tag>coding</tag>
+        </tags>
+        <description>inventory/entries/mangerie_online.html</description>
+        <thumbnail>thumbnails/mangerie_online_small.webp</thumbnail>
+        <links>
+            <link target="eb/mangerie_online">play game</link>
+            <link target="eb/mangerie_online/info">info</link>
+        </links>
+    </entry>
+    <entry>
     <title>Mangerie</title>
         <date>
             <year>2024</year>
@@ -14,7 +34,7 @@
             <tag>coding</tag>
         </tags>
         <description>inventory/entries/mangerie.html</description>
-        <thumbnail>thumbnails/mangerie.png</thumbnail>
+        <thumbnail>thumbnails/mangerie.webp</thumbnail>
         <links>
             <link target="demo/mangerie">download</link>
             <link target="https://github.com/planetegem/mangerie">view on github</link>
@@ -33,7 +53,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/ararat3.html</description>
-        <thumbnail>thumbnails/ararat-3.png</thumbnail>
+        <thumbnail>thumbnails/ararat-3_small.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=02&amp;h=03">read chapter</link>
             <link target ="/vk/pdf/d02h03.pdf">download pdf</link>
@@ -76,9 +96,10 @@
         <tags>
             <tag>game</tag>
             <tag>coding</tag>
+            <tag>encyclopaedia belgica</tag>
         </tags>
         <description>inventory/entries/pol_mem.html</description>
-        <thumbnail>thumbnails/logo-promo.png</thumbnail>
+        <thumbnail>thumbnails/logo-promo.webp</thumbnail>
         <links>
             <link target="https://planetegem.itch.io/political-memory">play on itch (desktop)</link>
             <link target="eb/political_memory_legacy">play locally (legacy)</link>
@@ -166,7 +187,7 @@
             <tag>demo</tag>
         </tags>
         <description>inventory/entries/planetegem_painter.html</description>
-        <thumbnail>thumbnails/paint_simulator.png</thumbnail>
+        <thumbnail>thumbnails/paint_simulator.webp</thumbnail>
         <links>
             <link target="/demo/planetegem_painter">start painting</link>
         </links>
@@ -203,7 +224,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/ararat2.html</description>
-        <thumbnail>thumbnails/ararat-2.png</thumbnail>
+        <thumbnail>thumbnails/ararat-2.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=02&amp;h=02">read chapter</link>
             <link target ="/vk/pdf/d02h02.pdf">download pdf</link>
@@ -222,7 +243,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/ararat1.html</description>
-        <thumbnail>thumbnails/ararat-1.png</thumbnail>
+        <thumbnail>thumbnails/ararat-1.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=02&amp;h=01">read chapter</link>
             <link target ="/vk/pdf/d02h01.pdf">download pdf</link>
@@ -279,7 +300,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/lipide3.html</description>
-        <thumbnail>thumbnails/lipide-3.png</thumbnail>
+        <thumbnail>thumbnails/lipide-3.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=01&amp;h=03">read chapter</link>
             <link target ="/vk/pdf/d01h03.pdf">download pdf</link>
@@ -300,7 +321,7 @@
             <tag>poster</tag>
         </tags>
         <description>inventory/entries/frikandel_special.html</description>
-        <thumbnail>thumbnails/frikandel_special.png</thumbnail>
+        <thumbnail>thumbnails/frikandel_special.webp</thumbnail>
         <links>
             <link target="/eb/frikandel_special/poster.pdf">download poster</link>
         </links>
@@ -337,7 +358,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/lipide2.html</description>
-        <thumbnail>thumbnails/lipide-2.png</thumbnail>
+        <thumbnail>thumbnails/lipide-2.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=01&amp;h=02">read chapter</link>
             <link target ="/vk/pdf/d01h02.pdf">download pdf</link>
@@ -356,7 +377,7 @@
             <tag>het vleeskanon</tag>
         </tags>
         <description>inventory/entries/lipide1.html</description>
-        <thumbnail>thumbnails/lipide1.png</thumbnail>
+        <thumbnail>thumbnails/lipide-1.webp</thumbnail>
         <links>
             <link target="/vk/index.php?d=01&amp;h=01">read chapter</link>
             <link target ="/vk/pdf/d01h01.pdf">download pdf</link>

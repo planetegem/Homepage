@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <p>
         &#169; <?php echo date("Y")?> Niels Van Damme | info@planetegem.be | 
         <a href="https://www.instagram.com/planetegem/" target="_blank">www.instagram.com/planetegem</a> 
